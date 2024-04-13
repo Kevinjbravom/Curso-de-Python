@@ -29,7 +29,7 @@ def agregar_tarea():
                 print('¡Error! El código de tarea ingresado ya está en uso.')
                 return
 
-        titulo = input('Ingrese el título de la tarea: ')
+        titulo = input('Ingrese el título de la tarea (máximo 20 caracteres): ')[:20] #Limite de caracteres
         descripcion = input('Ingrese la descripción de la tarea: ')
         status = input('Ingrese el estado de la tarea (completado o pendiente): ')
         fecha = input('Ingrese la fecha de la tarea (DD-MM-YYYY): ')
@@ -117,7 +117,7 @@ def actualizar_tarea():
                         print("")
 
                 elif opcion == "2":
-                    nuevo_titulo = input("Ingrese el nuevo título de la tarea: ")
+                    nuevo_titulo = input("Ingrese el nuevo título de la tarea (máximo 20 caracteres): ")[:20] #Limite de caracteres
                     tarea['titulo'] = nuevo_titulo
                     print("Título actualizado correctamente.")
                     print("")
